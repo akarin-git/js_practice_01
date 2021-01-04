@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div><button>btn</button></div>
+
+  <script>
+    const btn = document.querySelector('button');
+    btn.addEventListener('click',function task2(){
+      console.log('task2 done');
+    });
+
+    function a() {
+      setTimeout(function task1() {
+        console.log('task1 done');
+      },4000);
+
+      const startTime = new Date();
+      while(new Date() - startTime < 2000);
+
+      console.log('fn a done');
+    }
+
+    a();
+
+
+  </script>
+  
+</body>
+</html>
